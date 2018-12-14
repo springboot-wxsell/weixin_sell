@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.111:3306/weixin_sell?characterEncoding=utf8&useSSL=false
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.0.111
+    port: 6379
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+pagehelper:
+  auto-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  pageSizeZero: true
+  params: count=countSql
+#logging:
+#  level:
+#    com.sell.mapper: debug
+server:
+  servlet:
+    context-path: /weixin_sell
+
+
+
