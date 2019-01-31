@@ -56,12 +56,12 @@ create table `order_detail` (
 ) comment '订单详情表';
 
 
-create table `seller_info` (
-	`seller_id` varchar(32) not null,
-	`username` varchar(32) not null,
-	`password` varchar(32) not null,
-	`openin` varchar(64) not null,
-	`create_time` timestamp not null default current_timestamp comment '创建时间',
-	`update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
-	primary key (`seller_id`)
-) comment '卖家信息';
+CREATE TABLE `seller_info` (
+	`seller_id` varchar(32) NOT NULL,
+	`username` varchar(32) NOT NULL,
+	`password` varchar(32) NOT NULL,
+	`openid` varchar(64) NOT NULL,
+	`create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
+	PRIMARY KEY (`seller_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='卖家信息';
